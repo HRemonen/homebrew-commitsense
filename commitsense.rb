@@ -5,20 +5,20 @@
 class Commitsense < Formula
   desc ""
   homepage "https://github.com/HRemonen/homebrew-commitsense"
-  version "0.1.7"
+  version "0.1.8"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.7/CommitSense_Darwin_x86_64.tar.gz"
-      sha256 "ab0cc6ccc8dad386ef78fc7590c301d137a507f374427c7d7e51a3531dfdd6f5"
+    if Hardware::CPU.arm?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.8/CommitSense_Darwin_arm64.tar.gz"
+      sha256 "87e7f8644ccc9e1072d91e75f8d2601845d02803e77fdf39d7ef973ca8454355"
 
       def install
         bin.install "CommitSense"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.7/CommitSense_Darwin_arm64.tar.gz"
-      sha256 "e28cd44af38c3c6690a940af0ba7f1735d13f6d4f2f7b0541a876d4cf6ea9b0e"
+    if Hardware::CPU.intel?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.8/CommitSense_Darwin_x86_64.tar.gz"
+      sha256 "6a69183a4094a6b9ebd6e56df9bad1216bb769425d39dd40d9223d07b83b76b5"
 
       def install
         bin.install "CommitSense"
@@ -28,16 +28,16 @@ class Commitsense < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.7/CommitSense_Linux_x86_64.tar.gz"
-      sha256 "2b0a6d45984b7fdf73397bb957535f4097cf9f10662af5793d625d6e775706a9"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.8/CommitSense_Linux_x86_64.tar.gz"
+      sha256 "bbba1b5e7b6695611e876accb354b81d623fc4d1bfb695b104725c1aa01f8058"
 
       def install
         bin.install "CommitSense"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.7/CommitSense_Linux_arm64.tar.gz"
-      sha256 "1d563a29131aa4c1aca6c90cf32a7e2e647dab1fee0623936f2c2f4c114aed5c"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.1.8/CommitSense_Linux_arm64.tar.gz"
+      sha256 "9575c2f04a0952336be2f76e22f5df9416a8115b089aad2abd165140ede1925a"
 
       def install
         bin.install "CommitSense"
