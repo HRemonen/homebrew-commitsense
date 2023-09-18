@@ -5,20 +5,20 @@
 class Commitsense < Formula
   desc ""
   homepage "https://github.com/HRemonen/homebrew-commitsense"
-  version "0.2.6"
+  version "0.3.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.2.6/CommitSense_Darwin_arm64.tar.gz"
-      sha256 "9bf512322b7ae54d075be8b8934e3a3ff2069c8b665c7d6584cf1932bc6d7276"
+    if Hardware::CPU.intel?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.3.0/CommitSense_Darwin_x86_64.tar.gz"
+      sha256 "e02d1160c97090efdbb6c46e4f5b436e173c981a0a704fd852e06e00c0091f83"
 
       def install
         bin.install "CommitSense"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.2.6/CommitSense_Darwin_x86_64.tar.gz"
-      sha256 "48e7fd9ac001bc1e2a792f477c0399e181ef994aa14721307b3d812685c85273"
+    if Hardware::CPU.arm?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.3.0/CommitSense_Darwin_arm64.tar.gz"
+      sha256 "25219bbae883aa22ce5576c731f61f9cde22fb8dca77b5b395d819fc4f70117a"
 
       def install
         bin.install "CommitSense"
@@ -27,17 +27,17 @@ class Commitsense < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.2.6/CommitSense_Linux_x86_64.tar.gz"
-      sha256 "9e1a594d2a76aed399cdfe43721dfd8310f6d327d63a5e5483ec98dcb7e7bdd5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.3.0/CommitSense_Linux_arm64.tar.gz"
+      sha256 "c3de13867bb4208f0503b677cfcae784172bf679752444f1ede15bab2f08dbec"
 
       def install
         bin.install "CommitSense"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.2.6/CommitSense_Linux_arm64.tar.gz"
-      sha256 "95a40da360f6ce52825f37ebab66eb5c51659d233b65d8c424147063100e61c2"
+    if Hardware::CPU.intel?
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.3.0/CommitSense_Linux_x86_64.tar.gz"
+      sha256 "c0de7f076e00d7d4f1aa93112eec73983964ec0e96d5a889ab57e9b17e3ca059"
 
       def install
         bin.install "CommitSense"
