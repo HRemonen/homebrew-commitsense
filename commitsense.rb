@@ -5,20 +5,20 @@
 class Commitsense < Formula
   desc ""
   homepage "https://github.com/HRemonen/homebrew-commitsense"
-  version "0.4.0"
+  version "0.5.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.4.0/CommitSense_Darwin_arm64.tar.gz"
-      sha256 "ae26fdbd084d756f450fdbeb4c890a1292b3e5745e8b32ae3c67b4ef88f1ad9d"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.5.0/CommitSense_Darwin_arm64.tar.gz"
+      sha256 "bd71f53159057020fc7d7425e150b0eb6a874bc8a3294e762d42f31cea05604c"
 
       def install
         bin.install "CommitSense"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.4.0/CommitSense_Darwin_x86_64.tar.gz"
-      sha256 "f6cedcf91af7a7a26ac664777cc45a677bb6098425ed05725739f2cdc12f8665"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.5.0/CommitSense_Darwin_x86_64.tar.gz"
+      sha256 "ce56d34fab5227698880c56c5d5c25f643d0f5b96622b4b94bd3ce08f37b544f"
 
       def install
         bin.install "CommitSense"
@@ -28,16 +28,16 @@ class Commitsense < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.4.0/CommitSense_Linux_arm64.tar.gz"
-      sha256 "fe5804e7b5937fae343fe5ae1ce38db229383f1724496bcc8d9965f459ae16c2"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.5.0/CommitSense_Linux_arm64.tar.gz"
+      sha256 "e25958e298291fa5ddfb6153242864c755d08aea6dfb23eb526c4a62af607dbd"
 
       def install
         bin.install "CommitSense"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/HRemonen/CommitSense/releases/download/v0.4.0/CommitSense_Linux_x86_64.tar.gz"
-      sha256 "86ab1be0c0de1c0ca8ff6b53092ba3868537a772382d2402e0fc00a1ebfdb1e5"
+      url "https://github.com/HRemonen/CommitSense/releases/download/v0.5.0/CommitSense_Linux_x86_64.tar.gz"
+      sha256 "c9fad8e11d40eccbfaab3dbe09c4d0a3335edb572eaa5bf43d852a26398d9cd8"
 
       def install
         bin.install "CommitSense"
